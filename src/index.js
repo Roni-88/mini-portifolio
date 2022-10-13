@@ -1,20 +1,21 @@
-const mostrarSobre = document.getElementById ('sobre')
-const mostrarRedes = document.getElementById ('redes')
+const mostrarAba = document.querySelectorAll ('.aba')
+const mostrarInfo = document.querySelectorAll ('.informacao')
 
-const selecionarAba = document.querySelectorAll ('.aba')
+mostrarAba.forEach ((aba) => {
+    aba.addEventListener ('click', () => {
+        if (aba.classList.contains ('selecionado')) {
+            return
+        }
+        const elementoSelecionado = document.querySelector ('.selecionado')
+        elementoSelecionado.classList.remove ('selecionado')
 
-function sumirAba () {
-    selecionarAba.classList.remove = ('selecionado')
-}
-
-function aparecerAba () {
-    selecionarAba.classList.add = ('selecionado')
-}
-
-mostrarSobre.addEventListener ('click', () => {
-    
-})
-
-mostrarRedes.addEventListener ('click', () => {
-    sumirAba ()
+        mostrarInfo.forEach ((info) => {
+            if (info.classList.contains ('selecionado')) {
+                info.classList.remove ('selecionado')
+            } else {
+                aba.classList.add ('selecionado')
+                info.classList.add ('selecionado')
+            }
+        })
+    })
 })
