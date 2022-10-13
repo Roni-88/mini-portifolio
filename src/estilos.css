@@ -78,8 +78,13 @@ body {
 }
 
 .informacoes-abas .informacao {
-    min-height: 260px;
+    min-height: 350px;
     padding: 15px;
+    display: none;
+}
+
+.informacoes-abas .informacao.selecionado {
+    display: block;
 }
 
 .informacoes-abas .sub-titulo {
@@ -91,7 +96,7 @@ body {
 
 .informacoes-abas .descricao {
     font-size: 20px;
-    max-height: 180px;
+    max-height: 255px;
     overflow-y: auto;
     padding-right: 15px;
     color: #b8b6c5;
@@ -107,6 +112,9 @@ body {
     align-items: center;
     gap: 35px;
     margin: 35px 0 20px 0;
+    padding: 20px 0;
+    max-height: 260px;
+    overflow-y: auto;
 }
 
 .redes-sociais li a {
@@ -128,9 +136,14 @@ body {
 }
 
 .redes-sociais .github {
+    background-color: #020224;
+}
+
+.redes-sociais .instagram {
     background-color: #030d37;
 }
 
 .redes-sociais li a:hover {
     box-shadow: 0px 0px 25px #3772c0;
+    transition: 0.2s ease-in-out;
 }
