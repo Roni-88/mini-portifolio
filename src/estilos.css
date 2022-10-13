@@ -1,2 +1,136 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
+body {
+    background-image: url(../src/imagens/fundo-melhor.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+    color: #0606f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.cartao {
+    background-color: #030d37;
+    width: 480px;
+    border: 2px solid #0606f0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.cartao .minhas-informacoes {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.cartao .minhas-informacoes img {
+    border-radius: 50%;
+    border: 4px solid;
+}
+
+.cartao .minhas-informacoes .nome {
+    font-size: 26px;
+}
+
+.cartao .minhas-informacoes .cargo {
+    font-size: 20px;
+    color: #b8b6c5;
+}
+
+.cartao .conteudo {
+    margin-top: 15px;  
+}
+
+.cartao .abas {
+    display: flex;  
+}
+
+.cartao .abas .aba {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.cartao .abas img {
+    width: 30px;
+}
+
+.cartao .abas .aba.selecionado {
+    background-color: #150f5f;
+}
+
+.cartao .informacoes-abas {
+    background-color: #150f5f;
+}
+
+.cartao .abas .aba:hover {
+    background-color: #0e047c;
+}
+
+.informacoes-abas .informacao {
+    min-height: 260px;
+    padding: 15px;
+}
+
+.informacoes-abas .sub-titulo {
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #b8b6c5;
+}
+
+.informacoes-abas .descricao {
+    font-size: 20px;
+    max-height: 180px;
+    overflow-y: auto;
+    padding-right: 15px;
+    color: #b8b6c5;
+}
+
+.informacoes-abas .descricao span {
+    color: rgb(0, 213, 255);
+}
+
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    margin: 35px 0 20px 0;
+}
+
+.redes-sociais li a {
+    color: #b8b6c5;
+    width: 250px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.redes-sociais .curriculo {
+    background-color: #0e047c;
+}
+
+.redes-sociais .linkedin {
+    background-color: #0606f0;
+}
+
+.redes-sociais .github {
+    background-color: #030d37;
+}
+
+.redes-sociais li a:hover {
+    box-shadow: 0px 0px 25px #3772c0;
+}
