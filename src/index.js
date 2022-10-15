@@ -1,21 +1,25 @@
 const mostrarAba = document.querySelectorAll ('.aba')
-const mostrarInfo = document.querySelectorAll ('.informacao')
 
-mostrarAba.forEach ((aba) => {
+mostrarAba.forEach (aba => {
     aba.addEventListener ('click', () => {
         if (aba.classList.contains ('selecionado')) {
             return
         }
-        const elementoSelecionado = document.querySelector ('.selecionado')
-        elementoSelecionado.classList.remove ('selecionado')
-
-        mostrarInfo.forEach ((info) => {
-            if (info.classList.contains ('selecionado')) {
-                info.classList.remove ('selecionado')
-            } else {
-                aba.classList.add ('selecionado')
-                info.classList.add ('selecionado')
-            }
-        })
-    })
+        selecionarAba (aba)
+        mostrarInformacoesDaAba (aba)
+     })
 })
+
+function selecionarAba (aba) {
+    const abaSelecionada = document.querySelector ('.aba.selecionado')
+    abaSelecionada.classList.remove ('selecionado')
+    aba.classList.add ('selecionado')
+}
+
+function mostrarInformacoesDaAba (aba) {
+    const informacaoSelecionada = document.querySelector ('.informacao.selecionado')
+    informacaoSelecionada.classList.remove ('selecionado')
+    const idDoElementoDeInformacoesDaAba = `informacao-${aba.id}`
+    const informacaoASerMostrada = document.getElementById (idDoElementoDeInformacoesDaAba)
+    informacaoASerMostrada.classList.add ('selecionado')
+}
